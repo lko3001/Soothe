@@ -1,4 +1,4 @@
-# 🧘‍♀️ Soothe
+# 🧘‍♀️ The Soothe
 
 Soothe is a website that allows you to create and save notes in a WYSIWYG editor. It uses a combination of several technologies including Next.js, NextAuth.js, Prisma, Supabase, Tailwind CSS, and Tiptap editor.
 

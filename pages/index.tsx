@@ -25,8 +25,8 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>Soothe</title>
-        <meta property="og:title" content="Soothe" />
+        <title>The Soothe</title>
+        <meta property="og:title" content="The Soothe" />
         <meta
           name="description"
           content="Start writing your notes and have fun!"
