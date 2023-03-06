@@ -76,7 +76,6 @@ export default function Profile() {
         <div className="mb-4 grid grid-cols-1 gap-4 lg:mb-8 lg:grid-cols-3">
           {Object.entries(defaultTheme).map(([colorName, colorValue]) => {
             const spacedName = colorName.replace(/([a-z])([A-Z])/g, "$1 $2");
-            const colorInput = useRef<HTMLInputElement>(null);
 
             return (
               <div
@@ -100,7 +99,6 @@ export default function Profile() {
                     type="color"
                     value={customTheme[colorName]}
                     id={colorName}
-                    ref={colorInput}
                     onChange={(e) => {
                       setCustomTheme({
                         ...customTheme,
