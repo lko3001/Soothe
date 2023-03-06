@@ -1,0 +1,28 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "./auth/[...nextauth]";
+import prisma from "../../prisma/client";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const session = await getServerSession(req, res, authOptions);
+  const user = await prisma.user.findUnique({
+    where: { email: session?.user?.email || "" },
+  });
+
+  if (req.method === "POST" && user && user.id) {
+    try {
+      const body = JSON.parse(req.body);
+      const customTheme = await prisma.user.upsert({
+        where: { id: user.id },
+        update: { theme: body.theme },
+        create: { theme: body.theme },
+      });
+      res.send(customTheme);
+    } catch (err) {
+      res.send({ error: "ERROR" });
+    }
+  }
+}

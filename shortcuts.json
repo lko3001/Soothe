@@ -1,0 +1,32 @@
+[
+  {
+    "id": "heading",
+    "button": "H1",
+    "name": "Heading 1",
+    "shortcut": ["ctrl", "alt", "1"]
+  },
+  {
+    "id": "image",
+    "button": "IMG",
+    "name": "Image",
+    "shortcut": ["![]()"]
+  },
+  {
+    "id": "bulletlist",
+    "button": "•",
+    "name": "Bullet List",
+    "shortcut": ["* or -"]
+  },
+  {
+    "id": "orderedlist",
+    "button": "1.",
+    "name": "Ordered List",
+    "shortcut": ["1."]
+  },
+  {
+    "id": "codeblock",
+    "button": "</>",
+    "name": "Codeblock",
+    "shortcut": ["ctrl", "alt", "c"]
+  }
+]
