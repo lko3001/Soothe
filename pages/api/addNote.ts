@@ -26,7 +26,7 @@ export default async function handler(
         update: { ...note, updatedAt: new Date() },
         create: { ...note, createdAt: new Date(), updatedAt: new Date() },
       });
-      res.send(createdNote);
+      res.send({ createdNote, body });
     } catch (err) {
       res.send({ error: err });
     }

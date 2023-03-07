@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --white: 255, 255, 255;
+  --black: 34, 34, 34;
+  --lightGray: 232, 232, 232;
+  --grayHover: 202, 202, 202;
+  --gray: 137, 137, 137;
+  --accentWarm: 255, 87, 34;
+  --warmHover: 255, 141, 83;
+  --accentCold: 237, 35, 102;
+  --coldHover: 224, 118, 143;
+  --darkWhite: 20, 20, 20;
+  --darkBlack: 255, 255, 255;
+  --darkLightGray: 25, 25, 25;
+  --darkGrayHover: 94, 94, 94;
+  --darkGray: 137, 137, 137;
+  --darkAccentWarm: 255, 87, 34;
+  --darkWarmHover: 255, 141, 83;
+  --darkAccentCold: 237, 35, 102;
+  --darkColdHover: 224, 118, 143;
+}
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;

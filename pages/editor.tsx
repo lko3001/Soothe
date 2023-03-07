@@ -47,7 +47,7 @@ export default function Editor({ note }: { note: Note }) {
         unsaved();
       });
     }
-  }, [editor]);
+  }, [editor, id]);
 
   useEffect(() => {
     const warningText =
@@ -93,7 +93,7 @@ export default function Editor({ note }: { note: Note }) {
         })
           .then((res) => res.json())
           .then((data) => {
-            setId(data.id);
+            setId(data.createdNote.id);
             fetchNotes();
             toast.success("Note successfully saved", {
               id: toastId.current,
@@ -118,7 +118,7 @@ export default function Editor({ note }: { note: Note }) {
   return (
     <>
       <Head>
-        <title>Note Editor</title>
+        <title>Note Editor | {id || "Null"}</title>
         <meta property="og:title" content="Note Editor" />
         <meta name="description" content="Start Writing your note" />
         <meta property="og:description" content="Start Writing your note" />
@@ -133,6 +133,8 @@ export default function Editor({ note }: { note: Note }) {
       <Toaster />
       <section className="mx-auto max-w-7xl grow p-4 py-8 lg:p-20">
         <div className="mb-4 flex flex-row items-center justify-start gap-4 lg:mb-8">
+          <p>{id || "Null"}</p>
+          {id && <p>Id exists</p>}
           <NavBtn />
           <input
             type="text"

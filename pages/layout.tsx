@@ -16,12 +16,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {router.asPath === "/auth/logout" || router.asPath === "/auth/login" ? (
         <>{children}</>
       ) : (
-        isDone && (
-          <div className="flex min-h-screen bg-r-lightGray dark:bg-r-darkLightGray">
-            <Navbar user={user} />
-            {children}
-          </div>
-        )
+        <div className="flex min-h-screen bg-r-lightGray dark:bg-r-darkLightGray">
+          <Navbar user={user} />
+          {children}
+        </div>
       )}
     </>
   );

@@ -45,6 +45,7 @@ export default function Home({
 
       {notes.length ? (
         <section className="mx-auto max-w-7xl grow p-4 py-8 lg:p-20">
+          <h1 className="text-[rgba(var(--red))]">CIao</h1>
           <div className="mb-4 flex flex-row items-center justify-start gap-2 lg:mb-8">
             <NavBtn />
             <input
