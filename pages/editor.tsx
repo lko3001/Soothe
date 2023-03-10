@@ -11,6 +11,7 @@ import { useNotesContext } from "@/context/NotesContext";
 import { FloatingMenu } from "@tiptap/react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { useNavbarContext } from "@/context/NavbarContext";
 
 export default function Editor({ note }: { note: Note }) {
   const [id, setId] = useState("");

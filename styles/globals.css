@@ -37,7 +37,6 @@
   content: attr(data-placeholder);
   float: left;
   height: 0;
-  pointer-events: none;
 }
 .tippy-content,
 .tippy-box,
@@ -50,6 +49,13 @@ div[data-tippy-root] {
 ul[data-type="taskList"] {
   list-style: none;
   padding: 0;
+}
+ul,
+ul > *,
+ul > * > *,
+.ProseMirror {
+  word-break: break-all;
+  pointer-events: auto !important;
 }
 ul[data-type="taskList"] p {
   margin: 0;

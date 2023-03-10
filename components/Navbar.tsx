@@ -46,7 +46,7 @@ export default function Navbar({ user }: { user?: User }) {
   return (
     <>
       <div
-        className={`pointer-events-none fixed top-0 left-0 h-screen w-screen transition-colors duration-300 md:hidden ${
+        className={`pointer-events-none fixed top-0 left-0 z-10 h-screen w-screen transition-colors duration-300 md:hidden ${
           open
             ? "pointer-events-auto bg-r-black/30 dark:bg-r-darkBlack/30"
             : "bg-transparent"
@@ -54,7 +54,7 @@ export default function Navbar({ user }: { user?: User }) {
         onClick={() => handleOpen()}
       ></div>
       <nav
-        className={`fixed left-0 top-0 z-10 flex h-screen flex-col items-center justify-center gap-4 p-2 transition-transform duration-300 md:sticky [&>*]:shadow-lg [&>*]:shadow-r-black/5 [&>*]:dark:shadow-r-darkWhite/5 ${
+        className={`fixed left-0 top-0 z-20 flex h-screen flex-col items-center justify-center gap-4 p-2 transition-transform duration-300 md:sticky [&>*]:shadow-lg [&>*]:shadow-r-black/5 [&>*]:dark:shadow-r-darkWhite/5 ${
           open ? "" : "-translate-x-full md:translate-x-0"
         }`}
       >
