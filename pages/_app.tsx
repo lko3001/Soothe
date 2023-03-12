@@ -10,10 +10,12 @@ import ThemeProvider from "@/context/ThemeContext";
 const hanken_grotesk = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--hanken_grotesk",
+  display: "swap",
 });
 const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
   variable: "--roboto_mono",
+  display: "swap",
 });
 
 export default function App({
